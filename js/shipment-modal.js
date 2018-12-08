@@ -23,6 +23,7 @@ function collectShipmentData() {
     shipment.refinancingRate = $('#refinancing-rate').val();
     shipment.daysCount = $('#days-count').val();
     shipment.penalty = $('#penalty').val();
+    shipment.specificationValue = $('#specification-value').val();
 
     return shipment;
 }
