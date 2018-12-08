@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>КПД</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 </head>
 
@@ -19,43 +18,49 @@
             <main class="menu">
                 <div class="logo">КПД</div>
                 <div class="logo-text">
-                Калькулятор претензионной деятельности
+                    Калькулятор претензионной деятельности
                 </div>
             </main>
             <div class="content">
                 <div class="col-1-3">
-                    <button id="shipmentInput" type="button" class="btn btn-success" data-toggle="modal" data-target="#shipmentModal">Ввод
-                        отгрузок</button>
+                    <button id="shipmentInput" type="button" class="btn btn-success" data-toggle="modal" data-target="#shipment-modal">
+                        Ввод отгрузок
+                    </button>
                 </div>
                 <div class="col-2-3 alert alert-warning text1" role="alert">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, incidunt!
                 </div>
 
                 <div class="col-1-3">
-                    <button id="paymentInput" type="button" class="btn btn-success" data-toggle="modal" data-target="#payment-modal">Ввод
-                        оплаты</button>
+                    <button id="paymentInput" type="button" class="btn btn-success" data-toggle="modal" data-target="#paymentModal">
+                        Ввод оплаты
+                    </button>
                 </div>
                 <div class="col-2-3 alert alert-warning text1" role="alert">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, accusantium.
                 </div>
 
                 <div class="col-1-3">
-                    <button id="calculate" type="button" class="btn btn-success">Расщесать</button>
+                    <button id="calculate" type="button" class="btn btn-success">
+                        Расчесать
+                    </button>
                 </div>
                 <div class="col-2-3 alert alert-warning text1" role="alert">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, odit.
                 </div>
             </div>
+            <footer>
+                <div class="footer">
+                    IT-академия GENESIS
+                </div>
+            </footer>
         </div>
     </header>
 
 
-    <footer>
-
-    </footer>
     <!-- Modal -->
 
-    <div class="modal fade" id="shipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="shipment-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -68,12 +73,12 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Номер накладной</label>
-                        <input type="text" id="specificationNumber" class="form-control">
+                        <input type="text" id="specification-number2" class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label>Дата отгрузки</label>
-                        <input type="text" id="shipmendDate" class="form-control">
+                        <input type="text" id="shipmend-date" class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -83,12 +88,12 @@
 
                     <div class="form-group">
                         <label>Ставка рефинансирования (%)</label>
-                        <input type="text" id="refinancingRate" class="form-control">
+                        <input type="text" id="refinancing-rate" class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label>Кол-во дней в году</label>
-                        <select id="daysCount" class="form-control">
+                        <select id="days-count" class="form-control">
                             <option selected>365</option>
                             <option>366</option>
                         </select>

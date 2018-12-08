@@ -4,7 +4,7 @@
     scroll-behavior: smooth;
 }
 
-.container {
+header{
     width: 80%;
     margin: 0 auto;
     background: #ffffff;
@@ -13,21 +13,23 @@
 .logo{
     float: left;
     font-family: 'Russo One', sans-serif;
-    margin-left: 14%;
-    font-size: 40px;
+    margin-left: 2%;
+    font-size: 50px;
+    margin-top: -10px;
 }
 
 .logo-text{
     float: right;
     margin-right: 17%;
-    font-size: 18 px;
     font-family: 'Russo One', sans-serif;
+    font-size: 18 px;
     padding-top: 10px;
 }
 
 button{
     height: 50px;
     width: 150px;
+    float: left;    
 }
 
 .menu {
@@ -56,4 +58,16 @@ button{
     height: auto;
     float: left;
     word-break: break-all;
+}
+
+.footer{
+    background-color: gray;
+    padding: 20px 0;
+    color: #ffffff;
+    font-weight: bold;
+    opacity: 0.5;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
 }
