@@ -6,11 +6,10 @@ $().ready(function () {
     $('#specification-data').datepicker();
 });
 
-$('#paymentSubmit').click(function() {
-    console.log('1');
+$('#payment-submit').click(function() {
     window.payments.push(collectPaymentData());
-    $('#paymentModal').modal('hide');
-    $("#paymentModal input").each(function(indx, element){
+    $('#payment-modal').modal('hide');
+    $("#payment-modal input").each(function(indx, element){
         $(element).val("");
       });
 });
