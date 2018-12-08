@@ -8,4 +8,3 @@ $().ready(function(){
     console.log("ready");
 });
 
-export default shipments;

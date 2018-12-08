@@ -48,6 +48,7 @@
     float: left;
 }
 
+
 .menu .welcome{
     animation: animation_welcom1 1.5s cubic-bezier(.80, .04, .89, .32) 1,
     animation_welcom2 1s ease-out 1.5s 1;
