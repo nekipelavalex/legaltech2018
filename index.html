@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 
@@ -53,10 +54,10 @@
     </footer>
     <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap-datepicker.min.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
     <script src="js/shipment-modal.js" type="text/javascript"></script>
     <script src="js/payment-modal.js" type="text/javascript"></script>
-
     <!-- Modal -->
 
     <div class="modal fade" id="shipmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -77,7 +78,7 @@
 
                     <div class="form-group">
                         <label>Дата отгрузки</label>
-                        <input type="text" id="specificationNumber" class="form-control">
+                        <input type="text" id="shipmendDate" class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -98,8 +99,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Пеня за просрочку</label>
-                        <input type="text" id="specificationNumber" class="form-control">
+                        <label>Пеня за просрочку (%)</label>
+                        <input type="text" id="penalty" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
