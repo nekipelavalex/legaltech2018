@@ -1,9 +1,18 @@
-let payment = {};
-$('#paymentSubmit').click(addPaymentData);
-function addPaymentData() {
-    payment.specificationNumver = $('#specification-number').attr('value');
-    payment.data = $('#specification-data').attr('value');
-    payment.value = $('#specification-value').attr('value');
-    window.payments.push(payment);
+'use strict';
+window.payments = [];
+console.log('1g');
+$('#paymentSubmit').click(function() {
+    console.log('1');
+    window.payments.push(collectPaymentData());
+    console.log(window.payments);
+});
+
+function collectPaymentData() {
+    let payment = {};
+    payment.specificationNumber = $('#specification-number').val();
+    payment.data = $('#specification-data').val();
+    payment.value = $('#specification-value').val();
+    
+    return payment;
 }
 

@@ -7,4 +7,3 @@ function addShipment(shipment){
 $().ready(function(){
     console.log("ready");
 });
-
