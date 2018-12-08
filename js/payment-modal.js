@@ -1,6 +1,11 @@
 'use strict';
 window.payments = [];
 
+$().ready(function () {
+    $.fn.datepicker.defaults.format = "dd/mm/yyyy";
+    $('#specification-data').datepicker();
+});
+
 $('#paymentSubmit').click(function() {
     console.log('1');
     window.payments.push(collectPaymentData());
