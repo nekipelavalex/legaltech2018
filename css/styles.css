@@ -1,4 +1,4 @@
-*{
+    *{
     margin: 0;
     padding: 0;
 }
@@ -21,6 +21,8 @@
 .content {
     min-height: 100vh;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .col-1-3 {
