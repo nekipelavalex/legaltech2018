@@ -12,10 +12,13 @@
 
 .logo{
     float: right;
+    font-family: 'Pacifico', cursive;
 }
 
 .welcome{
     float: left;
+    font-family: 'Pacifico', cursive;
+    color: rgb(231, 45, 20);
 }
 
 .menu {
@@ -45,15 +48,26 @@
     float: left;
 }
 
+
 .menu .welcome{
-    animation: animation_welcom 2s linear   1;
+    animation: animation_welcom1 1.5s cubic-bezier(.80, .04, .89, .32) 1,
+    animation_welcom2 1s ease-out 1.5s 1;
+    animation-fill-mode: forwards;
 }
 
-@keyframes animation_welcom{
-    from{
+@keyframes animation_welcom1{
+    0%{ 
+        transform: translateX(0px);
 
     }
-    to{
+    100%{
+        transform: translateX(300px);
+    }
+}
 
-}
-}
+@keyframes animation_welcom2{
+    0%{ 
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(140px);}}
