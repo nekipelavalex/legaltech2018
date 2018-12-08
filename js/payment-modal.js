@@ -1,10 +1,9 @@
 'use strict';
 window.payments = [];
-console.log('1g');
+
 $('#paymentSubmit').click(function() {
     console.log('1');
     window.payments.push(collectPaymentData());
-    console.log(window.payments);
 });
 
 function collectPaymentData() {
