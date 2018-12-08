@@ -9,7 +9,8 @@ $().ready(function(){
 });
 
 
-$('#calculatet').click(function () {
+$('#calculate').click(function () {
+    console.log("fff");
     window.shipments.forEach(function(element) {
         console.log(element);
       });
