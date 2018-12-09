@@ -2,16 +2,22 @@
 
 $('#calculate').click(function () {
     let averageDebt = 0;
+    let shipmentsValueSumm = 0;
+    let paymentsValueSumm = 0;
+    let specificationsNumber = [];
+
     window.shipments.forEach(function (shipment) {
-        let paymentsValueSumm = 0;
-        window.payments.forEach(function (payment) {
-            if(payment.specificationNumber == shipment.specificationNumber){
-                paymentsValueSumm += payment.value;
-            }
-        });
-        
-        averageDebt += (shipment.specificationValue - paymentsValueSumm);
+        shipmentsValueSumm += shipment.specificationValue;
+        specificationsNumber.push(shipment.specificationNumber);
     });
 
-    alert("Общий долг: " + averageDebt);
+    window.payments.forEach(function (payment) {
+        if(specificationsNumber.includes(payment.specificationNumber)){
+            paymentsValueSumm += payment.value;
+        }
+    });
+
+    averageDebt =  shipmentsValueSumm - paymentsValueSumm;
+
+    alert("Сумма основного долга: " + averageDebt);
 });
