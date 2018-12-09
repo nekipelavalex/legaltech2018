@@ -21,7 +21,7 @@ body {
 .box {
   display: inline-block;
   margin: 0 20px;
-  min-height: 330px;
+  min-height: 30px;
   width: 250px;
   background: white;
   text-align: center;
