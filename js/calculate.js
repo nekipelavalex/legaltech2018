@@ -5,9 +5,10 @@ $('#calculate').click(function () {
     let overalPercent = calculatePercent();
     let overalPenalty = calculatePenalty();
 
-    alert(  'Сумма основного долга: ' + averageDebt + '\r\n' +
-            'Пеня за просрочку: ' + overalPenalty + '\r\n' +
-            'Процент за пользование чужими ден. ср.: ' + overalPercent);
+    alert(  'Сумма основного долга: ' + averageDebt.toFixed(4) + '\r\n' +
+            'Пеня за просрочку: ' + overalPenalty.toFixed(4) + '\r\n' +
+            'Процент за пользование чужими ден. ср.: ' + overalPercent.toFixed(4)
+        );
 });
 
 function calculateAverageDebt(){
