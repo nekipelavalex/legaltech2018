@@ -13,62 +13,59 @@
 </head>
 
 <body>
-    <header>
-        <main class="menu">
-            <div class="logo">КПД</div>
-            <div class="logo-text">
-                Калькулятор претензионной деятельности
-            </div>
-        </main>
+    <div class="wrapper">
+        <header>
+            <main class="menu">
+                <div class="container">
+                    <div class="logo">КПД</div>
+                    <div class="logo-text">
+                        &mdash; Калькулятор претензионной деятельности
+                    </div>
+                </div>
+            </main>
+        </header>
         <div class="container">
             <div class="content">
-                <div class="wrap">
-                    <div class="box" style="float: left;">
-                        <h1> &laquo; Шаг первый &raquo;</h1>
-                        <p class="about">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
-                            тексты.
-                            Пустился своих снова назад курсивных меня, дороге, живет языком заглавных напоивший, текста
-                            города
-                            речью грамматики. Повстречался рыбными необходимыми злых безопасную.
-                        </p>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#shipment_modal">
-                            Ввод отгрузок <span id="shipments_count"></span>
-                        </button>
-                    </div>
-                    <div class="box" style="float: center;">
-                        <h1>&laquo; Шаг второй &raquo;</h1>
-                        <p class="about">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
-                            тексты.
-                            Пустился своих снова назад курсивных меня, дороге, живет языком заглавных напоивший, текста
-                            города
-                            речью грамматики. Повстречался рыбными необходимыми злых безопасную.
-                        </p>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#payment_modal">
-                            Ввод оплаты <span id="payments_count"></span>
-                        </button>
-                    </div>
-                    <div class="box" style="float: right;">
-                        <h1>&laquo; Шаг третий &raquo;</h1>
-                        <p class="about">
-                            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
-                            тексты.
-                            Пустился своих снова назад курсивных меня, дороге, живет языком заглавных напоивший, текста
-                            города
-                            речью грамматики. Повстречался рыбными необходимыми злых безопасную.
-                        </p>
-                        <button id="calculate" type="button" class="btn btn-success">Расчесать</button>
-                    </div>
+                <div class="box">
+                    <h1> &laquo; Шаг первый &raquo;</h1>
+                    <p class="about">
+                        Введите данные по отгрузкам товара
+                    </p>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#shipment_modal">
+                        Ввод отгрузок <span id="shipments_count"></span>
+                    </button>
+                </div>
+                <div class="box">
+                    <h1>&laquo; Шаг второй &raquo;</h1>
+                    <p class="about">
+                        Введите данные по оплате отгруженного товара
+                    </p>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#payment_modal">
+                        Ввод оплаты <span id="payments_count"></span>
+                    </button>
+                </div>
+                <div class="box">
+                    <h1>&laquo; Шаг третий &raquo;</h1>
+                    <p class="about">
+                        Нажмите на эту кнопочку и мы вам все рассчитаем!
+                    </p>
+                    <button id="calculate" type="button" class="btn btn-success">Расчесать</button>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
     <footer>
         <div class="footer">
-            IT-академия GENESIS
+            <div class="container">
+                &copy; 2018
+                <div class="text-footer">
+                    &mdash; все данные несут ознакомительный характер
+                </div>
+            </div>
         </div>
     </footer>
+
+
     <!-- Modal  -->
     <div class="modal fade" id="shipment_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -84,73 +81,43 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="specification_number2">Номер накладной</label>
-                            <input 
-                                type="text" 
-                                name="specification_number2"
-                                id="specification_number2" 
-                                class="form-control"
+                            <input type="text" name="specification_number2" id="specification_number2" class="form-control"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="shipment_date">Дата отгрузки</label>
-                            <input 
-                                type="text" 
-                                name="shipment_date"
-                                id="shipment_date" 
-                                class="form-control datepicker"
+                            <input type="text" name="shipment_date" id="shipment_date" class="form-control datepicker"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="specification_value">Сумма по накладной</label>
-                            <input 
-                                type="text" 
-                                name="specification_value"
-                                id="specification_value" 
-                                class="form-control"
+                            <input type="text" name="specification_value" id="specification_value" class="form-control"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="stitch">Отстрочка</label>
-                            <input 
-                                type="text" 
-                                name="stitch"
-                                id="stitch" 
-                                class="form-control" 
-                                required>
+                            <input type="text" name="stitch" id="stitch" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label>Ставка рефинансирования (%)</label>
-                            <input 
-                                type="text" 
-                                name="refinancing_rate"
-                                id="refinancing_rate" 
-                                class="form-control"
+                            <input type="text" name="refinancing_rate" id="refinancing_rate" class="form-control"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="days_count">Кол-во дней в году</label>
-                            <select 
-                                name="days_count" 
-                                id="days_count" 
-                                class="form-control" 
-                                required>
+                            <select name="days_count" id="days_count" class="form-control" required>
                                 <option selected>365</option>
                                 <option>366</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="penalty">Пеня за просрочку (%)</label>
-                            <input 
-                                type="text" 
-                                name="penalty"
-                                id="penalty" 
-                                class="form-control" 
-                                required>
+                            <input type="text" name="penalty" id="penalty" class="form-control" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -177,31 +144,18 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="specification_number">Номер накладной</label>
-                            <input 
-                                type="text" 
-                                name="specification_number"
-                                id="specification_number" 
-                                class="form-control"
+                            <input type="text" name="specification_number" id="specification_number" class="form-control"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="payment_value">Сумма оплаты</label>
-                            <input 
-                                type="text" 
-                                name="payment_value"
-                                id="payment_value" 
-                                class="form-control" 
-                                required>
+                            <input type="text" name="payment_value" id="payment_value" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label for="payment_date">Дата оплаты</label>
-                            <input 
-                                type="text" 
-                                name="payment_date"
-                                id="payment_date" 
-                                class="form-control datepicker"
+                            <input type="text" name="payment_date" id="payment_date" class="form-control datepicker"
                                 required>
                         </div>
                     </div>
