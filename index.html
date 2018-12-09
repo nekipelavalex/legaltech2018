@@ -13,17 +13,18 @@
 </head>
 
 <body>
-    <header>
-        <main class="menu">
-            <div class="logo">КПД</div>
-            <div class="logo-text">
-                Калькулятор претензионной деятельности
-            </div>
-        </main>
+    <div class="wrapper">
+        <header>
+            <main class="menu">
+                <div class="logo">КПД</div>
+                <div class="logo-text">
+                    Калькулятор претензионной деятельности
+                </div>
+            </main>
+        </header>
         <div class="container">
             <div class="content">
-                <div class="wrap">
-                    <div class="box" style="float: left;">
+                    <div class="box">
                         <h1> &laquo; Шаг первый &raquo;</h1>
                         <p class="about">
                             Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
@@ -36,7 +37,7 @@
                             Ввод отгрузок <span id="shipments_count"></span>
                         </button>
                     </div>
-                    <div class="box" style="float: center;">
+                    <div class="box">
                         <h1>&laquo; Шаг второй &raquo;</h1>
                         <p class="about">
                             Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
@@ -49,7 +50,7 @@
                             Ввод оплаты <span id="payments_count"></span>
                         </button>
                     </div>
-                    <div class="box" style="float: right;">
+                    <div class="box">
                         <h1>&laquo; Шаг третий &raquo;</h1>
                         <p class="about">
                             Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
@@ -61,14 +62,14 @@
                         <button id="calculate" type="button" class="btn btn-success">Расчесать</button>
                     </div>
                 </div>
-            </div>
         </div>
-    </header>
+    </div>
     <footer>
         <div class="footer">
-                &copy; <a src="#">ссыль</a>
+            &copy; <a src="#">ссыль</a>
         </div>
     </footer>
+
     <!-- Modal  -->
     <div class="modal fade" id="shipment_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -147,23 +148,13 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="specification_number">Номер накладной</label>
-                            <input 
-                                type="text" 
-                                name="specification_number" 
-                                value="11-1"
-                                id="specification_number" 
-                                class="form-control"
+                            <input type="text" name="specification_number" value="11-1" id="specification_number" class="form-control"
                                 required>
                         </div>
 
                         <div class="form-group">
                             <label for="payment_value">Сумма оплаты</label>
-                            <input 
-                                type="text" 
-                                name="payment_value" 
-                                value="45"
-                                id="payment_value" 
-                                class="form-control" 
+                            <input type="text" name="payment_value" value="45" id="payment_value" class="form-control"
                                 required>
                         </div>
 
