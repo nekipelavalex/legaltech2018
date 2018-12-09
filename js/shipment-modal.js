@@ -1,29 +1,32 @@
 'use strict';
+
 window.shipments = [];
 
-$().ready(function () {
-    $.fn.datepicker.defaults.format = "dd/mm/yyyy";
-    $('#shipmend-date').datepicker();
+
+$('#shipment_submit').click(function () {
+    if(!$(this).closest('form').valid()){
+        return false;
+    }
+
+    addShipment();
+    updateShipmentsCountLabel();
+    closeModal('shipment_modal');
 });
 
-$('#shipmend-submit').click(function () {
-    console.log('1');
-    window.shipments.push(collectShipmentData());
-    $('#shipmend-modal').modal('hide');
-    $("#shipmend-modal input").each(function (indx, element) {
-        $(element).val("");
-    });
-});
-
-function collectShipmentData() {
+function addShipment() {
     let shipment = {};
-    shipment.specificationNumber2 = $('#specification-number2').val();
-    shipment.shipmendDate = $('#shipmend-date').val();
-    shipment.stitch = $('#stitch').val();
-    shipment.refinancingRate = $('#refinancing-rate').val();
-    shipment.daysCount = $('#days-count').val();
-    shipment.penalty = $('#penalty').val();
-    shipment.specificationValue = $('#specification-value').val();
 
-    return shipment;
+    shipment.specificationNumber = $('#specification_number2').val();
+    shipment.shipmendDate = $('#shipment_date').val();
+    shipment.stitch = parseInt($('#stitch').val());
+    shipment.refinancingRate = $('#refinancing_rate').val();
+    shipment.daysCount = parseInt($('#days_count').val());
+    shipment.penalty = parseInt($('#penalty').val());
+    shipment.specificationValue = parseInt($('#specification_value').val());
+
+    window.shipments.push(shipment);
+}
+
+function updateShipmentsCountLabel(){
+    $('#shipments_count').text('(' + window.shipments.length + ')');
 }

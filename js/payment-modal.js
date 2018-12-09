@@ -1,25 +1,27 @@
 'use strict';
+
 window.payments = [];
 
-$().ready(function () {
-    $.fn.datepicker.defaults.format = "dd/mm/yyyy";
-    $('#specification-data').datepicker();
+$('#payment_submit').click(function () {
+    if(!$(this).closest('form').valid()){
+        return false;
+    }
+
+    addPayment();
+    updatePaymentCountLabel();
+    closeModal('payment_modal');
 });
 
-$('#payment-submit').click(function() {
-    window.payments.push(collectPaymentData());
-    $('#payment-modal').modal('hide');
-    $("#payment-modal input").each(function(indx, element){
-        $(element).val("");
-      });
-});
-
-function collectPaymentData() {
+function addPayment() {
     let payment = {};
-    payment.specificationNumber = $('#specification-number').val();
-    payment.data = $('#specification-data').val();
-    payment.value = $('#specification-value').val();
-    
-    return payment;
+
+    payment.specificationNumber = $('#specification_number').val();
+    payment.data = $('#payment_data').val();
+    payment.value = parseInt($('#payment_value').val());
+
+    window.payments.push(payment);
 }
 
+function updatePaymentCountLabel(){
+    $('#payment_count').text('(' + window.payments.length + ')');
+}
